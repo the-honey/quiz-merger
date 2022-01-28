@@ -1,0 +1,44 @@
+[
+    {
+        "question": "<p>This is a question.<p>",
+        "answers": [
+            {
+                "text": "Yes",
+                "is_correct": true
+            },
+            {
+                "text": "No",
+                "is_correct": false
+            },
+            {
+                "text": "Maybe",
+                "is_correct": false
+            },
+            {
+                "text": "I don't know",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "<p>This a multiple choice question.<p>",
+        "answers": [
+            {
+                "text": "Yes",
+                "is_correct": false
+            },
+            {
+                "text": "No",
+                "is_correct": true
+            },
+            {
+                "text": "Maybe",
+                "is_correct": true
+            },
+            {
+                "text": "I don't know",
+                "is_correct": true
+            }
+        ]
+    }
+]

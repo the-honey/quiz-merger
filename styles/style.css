@@ -1,0 +1,52 @@
+body {
+    font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+}
+
+.question-box {
+    border: 1px darkgray;
+    border-style: solid;
+    width: 90%;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.question-header {
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px;
+    border-bottom: 1px darkgray;
+    border-style: solid;
+}
+
+.question-body {
+    padding: 5px 20px 20px;
+}
+
+.question-text {
+    margin: 1.5em 0;
+}
+
+.question-text p {
+    margin: 12px 0;
+}
+
+.answers-wrapper p {
+    font-size: 14px;
+    padding: 15px 0px 0px 25px;
+    opacity: 50%;
+    border: 0px;
+    border-top: 1px lightgray;
+    border-style: solid;
+}
+
+.correct-answer {
+    opacity: 100% !important;
+}
+
+label::before {
+    content: " ";
+}
