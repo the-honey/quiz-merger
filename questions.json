@@ -21,7 +21,7 @@
         ]
     },
     {
-        "question": "<p>This a multiple choice question.<p>",
+        "question": "<p>This is a multiple choice question<p>",
         "answers": [
             {
                 "text": "Yes",
