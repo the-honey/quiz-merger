@@ -1,12 +1,19 @@
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 request.open("GET", "../questions.json", false);
 request.send(null)
-var jsondata = JSON.parse(request.responseText);
+let jsondata = JSON.parse(request.responseText);
+
+const RANDOMIZE_QUESTIONS = false;
+const RANDOMIZE_CHOICES = false;
 
 window.onload = function() {
-    for (let [i, question] of Object.entries(jsondata)) {
-        var choices = "";
-        for (let [j, answer] of Object.entries(question.answers)) {
+    let questions = RANDOMIZE_QUESTIONS ? Object.entries(jsondata.sort(() => Math.random() - 0.5)) : Object.entries(jsondata);
+
+    for (let [i, question] of questions) {
+        let answers = RANDOMIZE_CHOICES ? Object.entries(question.answers.sort(() => Math.random() - 0.5)) : Object.entries(question.answers);
+
+        let choices = "";
+        for (let [j, answer] of answers) {
             if (answer.is_correct)
                 choices += '<p class="correct-answer"><input type="radio" disabled checked><label>' + answer.text + '</label></p>';
             else
@@ -19,7 +26,7 @@ window.onload = function() {
                             + choices
                             + '</div></div>';
 
-        var myDiv = document.createElement("div");
+        let myDiv = document.createElement("div");
         myDiv.className = 'question-box';
         myDiv.innerHTML = question_box;
         document.body.appendChild(myDiv);
