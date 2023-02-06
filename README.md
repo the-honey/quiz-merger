@@ -4,6 +4,6 @@
 
 It merges the collected questions (json) into one readable, canvas styled document.
 
-## In action:
+## Screenshot:
 
 ![](image.png)
